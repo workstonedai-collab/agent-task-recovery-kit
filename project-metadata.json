@@ -1,0 +1,15 @@
+{
+  "repository": "agent-task-recovery-kit",
+  "title": "Agent Task Recovery Kit · 长任务恢复工具",
+  "description": "Checkpoint sequential JavaScript and agent workflows, reuse completed steps after failure, bound retries and supply stable idempotency keys. No cloud required. 本地长任务分步保存、失败恢复、复用成果、有界重试与幂等键，无需云服务。",
+  "license": "Apache-2.0",
+  "visibility": "public",
+  "topics": [
+    "agents",
+    "checkpointing",
+    "workflow",
+    "retry",
+    "task-runner",
+    "local-first"
+  ]
+}

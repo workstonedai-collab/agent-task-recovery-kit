@@ -1,0 +1,46 @@
+{
+  "name": "agent-task-recovery-kit",
+  "version": "0.1.0",
+  "private": false,
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "exports": "./src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/index.js",
+    "demo": "node examples/resume.js"
+  },
+  "dependencies": {},
+  "files": [
+    "src",
+    "docs",
+    "examples",
+    "README.md",
+    "README.zh-CN.md",
+    "CONTRIBUTING.md",
+    "AGENTS.md",
+    "test",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "description": "Checkpoint sequential JavaScript and agent workflows, reuse completed steps after failure, bound retries and supply stable idempotency keys. No cloud required. 本地长任务分步保存、失败恢复、复用成果、有界重试与幂等键，无需云服务。",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/workstonedai-collab/agent-task-recovery-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/workstonedai-collab/agent-task-recovery-kit/issues"
+  },
+  "homepage": "https://github.com/workstonedai-collab/agent-task-recovery-kit#readme",
+  "keywords": [
+    "agents",
+    "checkpointing",
+    "workflow",
+    "retry",
+    "task-runner",
+    "local-first"
+  ]
+}
