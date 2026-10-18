@@ -1,5 +1,10 @@
 # Agent Task Recovery Kit · 长任务恢复工具
 
+New example: `node examples/save-after-generation.js` checkpoints a fictional
+generation, fails a later save, then explicitly retries and reopens its result.
+In fresh state it prints `generationCalls: 1` and `saveCalls: 2`. A crash before
+the generation checkpoint is saved can still repeat that stage. No model is called.
+
 [English](README.md) · [简体中文](README.zh-CN.md)
 
 [![CI](https://github.com/workstonedai-collab/agent-task-recovery-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/workstonedai-collab/agent-task-recovery-kit/actions/workflows/ci.yml) · [Apache-2.0](LICENSE) · Node.js 22.12+

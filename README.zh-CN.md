@@ -1,5 +1,9 @@
 # Agent Task Recovery Kit · 长任务恢复工具
 
+新增 `node examples/save-after-generation.js`：虚构生成完成并保存检查点，后续
+保存故意失败，显式继续后重新读取结果。全新状态输出 `generationCalls: 1`、
+`saveCalls: 2`。生成检查点落盘前崩溃仍可能重复执行；示例不调用模型。
+
 [English](README.md) · [简体中文](README.zh-CN.md)
 
 [![CI](https://github.com/workstonedai-collab/agent-task-recovery-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/workstonedai-collab/agent-task-recovery-kit/actions/workflows/ci.yml) · [Apache-2.0](LICENSE) · Node.js 22.12+
