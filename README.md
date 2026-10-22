@@ -1,10 +1,5 @@
 # Agent Task Recovery Kit · 长任务恢复工具
 
-New example: `node examples/save-after-generation.js` checkpoints a fictional
-generation, fails a later save, then explicitly retries and reopens its result.
-In fresh state it prints `generationCalls: 1` and `saveCalls: 2`. A crash before
-the generation checkpoint is saved can still repeat that stage. No model is called.
-
 [English](README.md) · [简体中文](README.zh-CN.md)
 
 [![CI](https://github.com/workstonedai-collab/agent-task-recovery-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/workstonedai-collab/agent-task-recovery-kit/actions/workflows/ci.yml) · [Apache-2.0](LICENSE) · Node.js 22.12+
@@ -14,6 +9,15 @@ the generation checkpoint is saved can still repeat that stage. No model is call
 Agent Task Recovery Kit is a small local runner for sequential JavaScript tasks. It is useful when a collection, transformation or agent workflow has several expensive steps and a later failure should not deliberately restart the completed work. Provide your own step functions; the runner stores JSON outputs, checks their identity, retries within limits and reuses completed results on the next run.
 
 There are no model/provider dependencies, queue servers or required cloud services. You decide what each step does and where local state is saved.
+
+## Recent example / 新增示例
+
+新增失败恢复示例：虚构生成结果先存入检查点，后续保存失败后显式重试并重开；不调用模型，检查点落盘前的崩溃仍可能重复生成。
+
+New example: `node examples/save-after-generation.js` checkpoints a fictional
+generation, fails a later save, then explicitly retries and reopens its result.
+In fresh state it prints `generationCalls: 1` and `saveCalls: 2`. A crash before
+the generation checkpoint is saved can still repeat that stage. No model is called.
 
 ## Contents
 

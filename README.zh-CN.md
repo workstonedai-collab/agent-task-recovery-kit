@@ -1,9 +1,5 @@
 # Agent Task Recovery Kit · 长任务恢复工具
 
-新增 `node examples/save-after-generation.js`：虚构生成完成并保存检查点，后续
-保存故意失败，显式继续后重新读取结果。全新状态输出 `generationCalls: 1`、
-`saveCalls: 2`。生成检查点落盘前崩溃仍可能重复执行；示例不调用模型。
-
 [English](README.md) · [简体中文](README.zh-CN.md)
 
 [![CI](https://github.com/workstonedai-collab/agent-task-recovery-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/workstonedai-collab/agent-task-recovery-kit/actions/workflows/ci.yml) · [Apache-2.0](LICENSE) · Node.js 22.12+
@@ -13,6 +9,12 @@
 Agent Task Recovery Kit 是一个本地、顺序执行的 JavaScript 任务运行器。适合包含多个较贵步骤的采集、处理或 Agent 流程：后续步骤失败时，可以复用之前已保存的成果。你提供步骤函数，工具负责保存 JSON 结果、核对身份、有界重试和恢复。
 
 无需模型依赖、队列服务器或云服务。步骤做什么、状态存在哪里都由你决定。
+
+## 新增示例
+
+新增 `node examples/save-after-generation.js`：虚构生成完成并保存检查点，后续
+保存故意失败，显式继续后重新读取结果。全新状态输出 `generationCalls: 1`、
+`saveCalls: 2`。生成检查点落盘前崩溃仍可能重复执行；示例不调用模型。
 
 ## 阅读导航
 
